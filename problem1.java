@@ -5,7 +5,7 @@ public class Problem1 {
         String s = sc.next();
         
         int n = s.length();
-        String t = s + s; // for cyclic
+        String t = s + s; 
         
         HashSet<Character> set = new HashSet<>();
         
@@ -14,7 +14,7 @@ public class Problem1 {
         
         while (j < 2 * n) {
             
-            // remove until no duplicate or window size <= n
+            
             while (set.contains(t.charAt(j)) || (j - i + 1 > n)) {
                 char ch = t.charAt(i);
                 set.remove(ch);
@@ -22,7 +22,7 @@ public class Problem1 {
                 i++;
             }
             
-            // add current character
+            
             char ch = t.charAt(j);
             set.add(ch);
             currSum += (ch - 'a' + 1);
