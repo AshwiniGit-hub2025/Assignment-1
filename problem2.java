@@ -12,7 +12,7 @@ public class Problem2 {
 
         int K = sc.nextInt();
 
-        // Step 1: Check if possible
+       
         for (int i = 1; i < n; i++) {
             if ((A[i] - A[0]) % K != 0) {
                 System.out.println(-1);
@@ -20,13 +20,13 @@ public class Problem2 {
             }
         }
 
-        // Step 2: Sort array
+       
         Arrays.sort(A);
 
-        // Step 3: Take median
+      
         int median = A[n / 2];
 
-        // Step 4: Count operations
+        
         int operations = 0;
         for (int i = 0; i < n; i++) {
             operations += Math.abs(A[i] - median) / K;
